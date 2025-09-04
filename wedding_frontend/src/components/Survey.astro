@@ -1,0 +1,33 @@
+<section id='form' class="w-full h-screen flex flex-col justify-center items-center bg-[url('../assets/background.svg')] bg-cover bg-center">
+  <form action='' method='post' class='flex flex-col'>
+    <h1 class='sm:text-9xl text-4xl'>Encuesta</h1>
+    <label for='name'>Nombre:</label>
+    <input type='text' id='name' name='name' required />
+    <br />
+    <label for='email'>Email:</label>
+    <input type='text' id='email' name='email' required />
+    <br />
+    <label for='attendance'>¿Asistirás?</label>
+    <select id='attendance' name='attendance' required>
+      <option value='yes'>Sí</option>
+      <option value='no'>No</option>
+    </select>
+    <br />
+    <label for='meal'>Alergías:</label>
+    <input type='text' id='meal' name='meal' />
+    <br />
+    <label for='hotel'>Vas a reservar hotel?</label>
+    <select name='hotel' id='hotel'>
+      <option value='yes'>Sí</option>
+      <option value='no'>No</option>
+    </select>
+    <br />
+    <label for='whotel' hidden>Cual?</label>
+    <select name='whotel' id='whotel' hidden>
+      <option value='x'>x</option>
+      <option value='y'>y</option>
+    </select>
+    <br />
+    <button type='submit' class='mt-4 p-2 bg-blue-500 text-white rounded'>Enviar</button>
+  </form>
+</section>
