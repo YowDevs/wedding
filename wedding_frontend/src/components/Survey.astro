@@ -1,130 +1,71 @@
 <section
-  id="form"
-  class="w-full h-screen
+  id='form'
+  class="w-full h-full
         flex flex-col
         justify-center items-center
-        bg-[url('../assets/background.svg')] bg-cover bg-center"
+        bg-[url('../assets/background.svg')] bg-auto bg-center sm:col-start-2 sm:col-end-5 sm:row-start-3 col-start-1 col-end-6"
 >
-  <form action="" method="post" class="flex flex-col">
-    <h1 class="sm:text-9xl text-4xl">Encuesta</h1>
+  <form action='' method='post' class='flex flex-col p-20'>
+    <h1 class='sm:text-9xl text-4xl text-center p-20'>Encuesta</h1>
 
-    <label for="name">Nombre:</label>
-    <input
-      type="text"
-      id="name"
-      name="name"
-      placeholder="Introduce tu nombre"
-      required
-    />
+    <label for='name'>Nombre:</label>
+    <input type='text' id='name' name='name' placeholder='Introduce tu nombre' required />
 
-    <label for="surname">Apellidos:</label>
-    <input
-      type="text"
-      id="surname"
-      name="surname"
-      placeholder="Introduce tus apellidos"
-      required
-    />
+    <label for='surname'>Apellidos:</label>
+    <input type='text' id='surname' name='surname' placeholder='Introduce tus apellidos' required />
 
-    <label for="attendance">¿A qué asistirás?</label>
+    <label for='attendance'>¿A qué asistirás?</label>
     <label>
-      <input
-        type="radio"
-        id="attendance-none"
-        name="attendance"
-        value="none"
-        required
-      />
+      <input type='radio' id='attendance-none' name='attendance' value='none' required />
       Nada
     </label>
     <label>
-      <input
-        type="radio"
-        id="attendance-prewedding"
-        name="attendance"
-        value="prewedding"
-        required
-      />
+      <input type='radio' id='attendance-prewedding' name='attendance' value='prewedding' required />
       Preboda
     </label>
     <label>
-      <input
-        type="radio"
-        id="attendance-wedding"
-        name="attendance"
-        value="wedding"
-        required
-      />
+      <input type='radio' id='attendance-wedding' name='attendance' value='wedding' required />
       Boda
     </label>
     <label>
-      <input
-        type="radio"
-        id="attendance-both"
-        name="attendance"
-        value="both"
-        required
-      />
+      <input type='radio' id='attendance-both' name='attendance' value='both' required />
       Preboda y boda
     </label>
 
-    <label for="people">¿Cuántas personas asistís?</label>
-    <input
-      type="number"
-      id="people"
-      name="people"
-      min="1"
-      placeholder="1"
-      required
-    />
+    <label for='people'>¿Cuántas personas asistís?</label>
+    <input type='number' id='people' name='people' min='1' placeholder='1' required />
 
-    <label for="allergies">Alergias:</label>
-    <input
-      type="text"
-      id="allergies"
-      name="allergies"
-      placeholder="Introduce tus alergias"
-    />
+    <label for='allergies'>Alergias:</label>
+    <input type='text' id='allergies' name='allergies' placeholder='Introduce tus alergias' />
 
-    <label for="preferences">Preferencias alimentarias:</label>
-    <input
-      type="text"
-      id="preferences"
-      name="preferences"
-      placeholder="Introduce tus preferencias alimentarias"
-    />
+    <label for='preferences'>Preferencias alimentarias:</label>
+    <input type='text' id='preferences' name='preferences' placeholder='Introduce tus preferencias alimentarias' />
 
-    <label for="bus"
-      >¿Uso de alguno de los autobuses que pondremos a vuestra disposición?</label
-    >
+    <label for='bus'>¿Uso de alguno de los autobuses que pondremos a vuestra disposición?</label>
     <label>
-      <input type="radio" id="bus-yes" name="bus" />
+      <input type='radio' id='bus-yes' name='bus' />
       Sí
     </label>
     <label>
-      <input type="radio" id="bus-no" name="bus" />
+      <input type='radio' id='bus-no' name='bus' />
       No
     </label>
 
-    <div class="hidden flex flex-col">
-      <label for="which-bus">¿Cuál?</label>
+    <div class='hidden flex flex-col'>
+      <label for='which-bus'>¿Cuál?</label>
       <label>
-        <input type="radio" id="bus-a" name="which-bus" />
+        <input type='radio' id='bus-a' name='which-bus' />
         Bus A
       </label>
       <label>
-        <input type="radio" id="bus-b" name="which-bus" />
+        <input type='radio' id='bus-b' name='which-bus' />
         Bus B
       </label>
     </div>
 
-    <button
-      type="submit"
-      class="mt-4 p-2
+    <button type='submit' class='mt-4 p-2
             bg-blue-500 text-white
-            rounded"
-      >Enviar</button
-    >
+            rounded'>Enviar</button>
   </form>
 </section>
 
