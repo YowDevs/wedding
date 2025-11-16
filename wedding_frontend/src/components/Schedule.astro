@@ -3,10 +3,13 @@ import Alianzas from "../assets/Alianzas.svg";
 import Copa from "../assets/Copa.svg";
 import Globos from "../assets/Globos.svg";
 import Tarta from "../assets/Tarta.svg";
+import BiFlower from "../assets/flowers/Jara duo.svg"
 ---
+<section id="Schedule" class="grid grid-cols-5 ">
+<div class='relative w-full flex bg-[#59002B] col-start-1 col-end-6 sm:col-start-2 sm:col-end-5 sm:row-start-1 justify-center m-0'>
+  <img id='flower' class="absolute left-[-300px] top-[200px] w-[500px] h-[500px]" src={BiFlower.src} alt='Flor decorativa'/>
 
-<div class='w-full flex bg-[#59002B] col-start-1 col-end-6 sm:col-start-2 sm:col-end-5 sm:row-start-1 justify-center m-0'>
-  <ul class='flex flex-col gap-0.5 pb-52 w-fit text-white m-20 mb-0'>
+  <ul class='flex flex-col gap-10 pb-52 w-fit text-white m-20 mb-0'>
     <li class='flex items-center gap-4'>
       <img class='2xl:w-42 2xl:h-42 sm:w-32 sm:h-32 h-24 w-24 ' src={Globos.src} alt='' />
       <div class='flex flex-col text-center'>
@@ -17,7 +20,7 @@ import Tarta from "../assets/Tarta.svg";
       </div>
     </li>
     
-    <li class='sm:ml-16 ml-8 mt-1 mb-4 pb-4'><div class='w-1 h-12 bg-white rounded-full'></div></li>
+    <!-- <li class='sm:ml-16 ml-8 mt-1 mb-4 pb-4'><div class='w-1 h-12 bg-white rounded-full'></div></li> -->
 
     <li class='flex items-center gap-4'>
       <img class='2xl:w-42 2xl:h-42 sm:w-32 sm:h-32 h-24 w-24 ' src={Copa.src} alt='' />
@@ -29,7 +32,7 @@ import Tarta from "../assets/Tarta.svg";
       </div>
     </li>
 
-    <li class='sm:ml-16 ml-8 pt-8 pb-4'><div class='w-1 h-12 bg-white rounded-full'></div></li>
+    <!-- <li class='sm:ml-16 ml-8 pt-8 pb-4'><div class='w-1 h-12 bg-white rounded-full'></div></li> -->
 
     <li class='flex items-center gap-4'>
       <img class='2xl:w-42 2xl:h-42 sm:w-32 sm:h-32 h-24 w-24' src={Alianzas.src} alt='' />
@@ -41,7 +44,7 @@ import Tarta from "../assets/Tarta.svg";
       </div>
     </li>
 
-    <li class='sm:ml-16 ml-8 pb-2'><div class='w-1 h-12 my-2 bg-white rounded-full'></div></li>
+    <!-- <li class='sm:ml-16 ml-8 pb-2'><div class='w-1 h-12 my-2 bg-white rounded-full'></div></li> -->
 
     <li class='flex items-center gap-4'>
       <img class='2xl:w-42 2xl:h-42 sm:w-32 sm:h-32 h-24 w-24' src={Tarta.src} alt='' />
@@ -54,5 +57,5 @@ import Tarta from "../assets/Tarta.svg";
     </li>
   </ul>
 </div>
-
+</section>
 <style></style>

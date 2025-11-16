@@ -6,25 +6,15 @@ import Survey from "../components/Survey.astro";
 import Nav from "../components/Nav.astro";
 import Locations from "../components/Locations.astro";
 import Lodging from "../components/Lodging.astro";
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import LetterPicture from "../components/LetterPicture.astro";
 ---
 
 <Layout>
-  <div class='grid grid-cols-9'>
-    <Header />
     <Nav />
-  </div>
-  <div class='grid grid-cols-5'>
+    <Header />
+    <LetterPicture />
     <Schedule />
-  </div>
-  <div class='grid grid-cols-5'>
     <Locations />
-  </div>
-  <div class='grid grid-cols-5'>
     <Lodging />
-  </div>
-  <div class='grid grid-cols-5'>
     <Survey />
-  </div>
 </Layout>

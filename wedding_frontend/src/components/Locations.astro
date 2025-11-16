@@ -3,26 +3,33 @@ import Monasterio from "../assets/MONASTERIO.svg";
 import Bodegas from "../assets/BODEGAS.svg";
 import Herrera from "../assets/HERRERA.svg";
 import Pueblo from "../assets/PUEBLO.svg";
+import Flower from "../assets/flowers/Jara 1.svg";
 ---
 
-<section class='w-full flex gap-40 flex-col justify-center items-center bg-[#59002B] sm:col-start-2 sm:col-end-5 sm:row-start-3 pb-20 text-white'>
-  <div class='flex flex-col justify-center items-center'>
-    <h3>REAL MONASTERIO DE SANTA MARÍA DE GUADALUPE</h3>
-    <p>ceremonia</p>
-    <img class='2xl:w-42 2xl:h-42 sm:w-32 sm:h-32 h-24 w-24' src={Monasterio.src} alt='imagen de el monasterio' />
+<section id="Locations" class="grid grid-cols-5" >
+  <div class=' relative w-full flex flex-col justify-center items-center bg-[#59002B] sm:col-start-2 sm:col-end-5 sm:row-start-3 pb-20 text-white'>
+    <img id='flower'class="absolute top-[200px] right-[-200px] w-[300px] h-[300px]" src={Flower.src} alt='Flor decorativa'/>
+
+  <div class='relative flex justify-center items-center ml-60  m-0 -mb-22 p-0 text-xs'>
+    <h3 class="absolute top-0 text-white text-xs text-center m-0 p-0">REAL MONASTERIO DE <br> SANTA MARÍA DE GUADALUPE <br><span>Ceremonia</span></h3>
+    <img class='2xl:w-150 2xl:h-150 sm:w-74 sm:h-74 h-24 w-24  m-0 p-0' src={Monasterio.src} alt='imagen de el monasterio' />
   </div>
-  <div class='flex flex-col justify-center items-center'>
-    <h3>BODEGAS RUIZ TORRES</h3>
-    <p>Banquete</p>
-    <img class='2xl:w-42 2xl:h-42 sm:w-32 sm:h-32 h-24 w-24' src={Bodegas.src} alt='imagen de el monasterio' />
+  <div class='relative flex justify-center items-center  m-0 p-0 mr-40 -mb-42 px-5'>
+    <h3 class="absolute text-xs text-center left-50 top-22">BODEGAS RUIZ TORRES <br> <span>Banquete</span></h3>
+    <img class='2xl:w-150 2xl:h-150 sm:w-74 sm:h-74 h-24 w-24  m-0 p-0' src={Bodegas.src} alt='imagen de el monasterio' />
   </div>
-  <div class='flex flex-col justify-center items-center'>
-    <h3>HERRERA DEL DUQUE</h3>
-    <img class='2xl:w-42 2xl:h-42 sm:w-32 sm:h-32 h-24 w-24' src={Herrera.src} alt='imagen de el monasterio' />
+
+  <div class="relative flex justify-center items-center  m-0 p-0 -mb-22 ml-60">
+    <img class="2xl:w-150 2xl:h-150 sm:w-74 sm:h-74 h-24 w-24 m-0 p-0 " src={Herrera.src}  alt="imagen de el monasterio" />
+  <h3 class="absolute bottom-20 text-white text-xs  m-0 p-0">
+    HERRERA DEL DUQUE
+  </h3>
+</div>
+
+  <div class='relative flex justify-center items-center  m-0 p-0 mr-40'>
+    <h3 class="absolute top-10 text-xs left-7">FUENLABRADA DE LOS MONTES</h3>
+    <img class='2xl:w-150 2xl:h-150 sm:w-74 sm:h-74 h-24 w-24  m-0 p-0' src={Pueblo.src} alt='imagen de el monasterio' />
   </div>
-  <div class='flex flex-col justify-center items-center'>
-    <h3>FUENLABRADA DE LOS MONTES</h3>
-    <img class='2xl:w-42 2xl:h-42 sm:w-32 sm:h-32 h-24 w-24' src={Pueblo.src} alt='imagen de el monasterio' />
+  <p class="text-xs">*Habrá a vuestra disposición autobuses desde todos los puntos de partida para que podais disfrutar sin preocupaciones del gran día. <br> En la página wbe podréis encontrar más información. Podéis acceder a esta a través del QR de la derecha</p>
   </div>
-  <p>*Habrá a vuestra disposición autobuses desde todos los puntos de partida para que podais disfrutar sin preocupaciones del gran día. <br> En la página wbe podréis encontrar más información. Podéis acceder a esta a través del QR de la derecha</p>
 </section>
