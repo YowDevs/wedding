@@ -1,0 +1,55 @@
+<nav class='flex justify-center gap-5 mt-8 nav-curve text-[#59002B] text-lg sm:text-xl'>
+  <a href='#Schedule' class='curve curve-1'>EVENTOS</a>
+  <p class='curve curve-p1'>|</p>
+  <a href='#Locations' class='curve curve-2'>UBICACIONES</a>
+  <p class='curve curve-p2'>|</p>
+  <a href='#Lodging' class='curve curve-3'>ALOJAMIENTOS</a>
+  <p class='curve curve-p3'>|</p>
+  <a href='#Survey' class='curve curve-4'>ASISTENCIAS</a>
+</nav>
+
+<style>
+  /* Base */
+  .curve {
+    display: inline-block;
+  }
+
+  /* Estas transformaciones imitan EXACTAMENTE la forma de un rounded-t-full */
+  .curve-1 {
+    transform: translateY(86px) rotate(-35deg);
+  }
+  .curve-p1 {
+    transform: translateY(40px) rotate(-35deg);
+  }
+  .curve-2 {
+    transform: translateY(12px) rotate(-14deg);
+  }
+  .curve-p2 {
+    transform: translateY(-4px);
+  }
+  .curve-3 {
+    transform: translateY(6px) rotate(10deg);
+  }
+  .curve-p3 {
+    transform: translateY(30px) rotate(35deg);
+  }
+  .curve-4 {
+    transform: translateY(86px) translateX(12px) rotate(35deg);
+  }
+
+  /* Para móvil, hacemos la curvatura más suave */
+  @media (max-width: 640px) {
+    .curve-1 {
+      transform: translateY(6px) rotate(-3deg);
+    }
+    .curve-2 {
+      transform: translateY(2px) rotate(-1deg);
+    }
+    .curve-3 {
+      transform: translateY(2px) rotate(1deg);
+    }
+    .curve-4 {
+      transform: translateY(6px) rotate(3deg);
+    }
+  }
+</style>
