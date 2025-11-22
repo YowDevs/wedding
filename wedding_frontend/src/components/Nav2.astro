@@ -1,4 +1,4 @@
-<nav class='flex justify-center gap-5 mt-8 nav-curve text-[#59002B] text-lg sm:text-xl'>
+<nav id='nav2' class='flex justify-center gap-5 mt-8 nav-curve text-[#59002B] text-lg sm:text-xl transition-all duration-300'>
   <a href='#Schedule' class='curve curve-1'>EVENTOS</a>
   <p class='curve curve-p1'>|</p>
   <a href='#Locations' class='curve curve-2'>UBICACIONES</a>
@@ -12,6 +12,7 @@
   /* Base */
   .curve {
     display: inline-block;
+    transition: transform 0.3s ease;
   }
 
   /* Estas transformaciones imitan EXACTAMENTE la forma de un rounded-t-full */
@@ -23,13 +24,32 @@
   .curve-p3 {transform: translateY(30px) rotate(35deg);}
   .curve-4 {transform: translateY(86px) translateX(12px) rotate(35deg);}
 
+  /* Estado cuando se cierra la curva */
+  #nav2.closed .curve {
+    opacity: 0;
+  }
+
+  #nav2.closed .curve-1 {transform: translateY(0px) rotate(0deg);}
+  #nav2.closed .curve-p1 {transform: translateY(0px) rotate(0deg);}
+  #nav2.closed .curve-2 {transform: translateY(0px) rotate(0deg);}
+  #nav2.closed .curve-p2 {transform: translateY(0px) rotate(0deg);}
+  #nav2.closed .curve-3 {transform: translateY(0px) rotate(0deg);}
+  #nav2.closed .curve-p3 {transform: translateY(0px) rotate(0deg);}
+  #nav2.closed .curve-4 {transform: translateY(0px) translateX(0px) rotate(0deg);}
+
   /* Para móvil, hacemos la curvatura más suave */
   @media (max-width: 640px) {
     .curve-1 {transform: translateY(6px) rotate(-3deg);}
     .curve-2 {transform: translateY(2px) rotate(-1deg);}
     .curve-3 {transform: translateY(2px) rotate(1deg);}
     .curve-4 {transform: translateY(6px) rotate(3deg);}
+
+    #nav2.closed .curve-1 {transform: translateY(0px) rotate(0deg);}
+    #nav2.closed .curve-2 {transform: translateY(0px) rotate(0deg);}
+    #nav2.closed .curve-3 {transform: translateY(0px) rotate(0deg);}
+    #nav2.closed .curve-4 {transform: translateY(0px) rotate(0deg);}
   }
+
   @media (min-width: 1500px) {
     .curve-1 {transform: translateY(70px) rotate(-30deg);}
     .curve-p1 {transform: translateY(35px) rotate(-35deg);}
@@ -38,5 +58,31 @@
     .curve-3 {transform: translateY(6px) rotate(10deg);}
     .curve-p3 {transform: translateY(25px) rotate(35deg);}
     .curve-4 {transform: translateY(70px) translateX(12px) rotate(30deg);}
+
+    #nav2.closed .curve-1 {transform: translateY(0px) rotate(0deg);}
+    #nav2.closed .curve-p1 {transform: translateY(0px) rotate(0deg);}
+    #nav2.closed .curve-2 {transform: translateY(0px) rotate(0deg);}
+    #nav2.closed .curve-p2 {transform: translateY(0px) rotate(0deg);}
+    #nav2.closed .curve-3 {transform: translateY(0px) rotate(0deg);}
+    #nav2.closed .curve-p3 {transform: translateY(0px) rotate(0deg);}
+    #nav2.closed .curve-4 {transform: translateY(0px) translateX(0px) rotate(0deg);}
   }
 </style>
+
+<script>
+  const nav2 = document.getElementById('nav2');
+  const mainNav = document.getElementById('main-nav');
+
+  if (nav2 && mainNav) {
+    // Observar cuando main-nav tiene la clase 'show'
+    const observer = new MutationObserver(() => {
+      if (mainNav.classList.contains('show')) {
+        nav2.classList.add('closed');
+      } else {
+        nav2.classList.remove('closed');
+      }
+    });
+
+    observer.observe(mainNav, { attributes: true, attributeFilter: ['class'] });
+  }
+</script>

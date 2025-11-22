@@ -1,7 +1,36 @@
 <section class='grid grid-cols-1 sm:grid-cols-5'>
-  <div class='w-full flex flex-col justify-center items-center bg-[#59002B] sm:col-start-2 sm:col-end-5 sm:row-start-3  text-white rounded-t-full pt-20'>
+  <div id='letter-container' class='w-full flex flex-col justify-center items-center bg-[#59002B] sm:col-start-2 sm:col-end-5 sm:row-start-3 text-white rounded-t-full pt-20 transition-all duration-300'>
 
     <img class="py-20" src="https://picsum.photos/200/300/?blur" alt="">
 
   </div>
 </section>
+
+<style>
+  #letter-container {
+    border-radius: 9999px 9999px 0 0;
+    transition: border-radius 0.3s ease-in-out;
+  }
+
+  #letter-container.flat {
+    border-radius: 0px;
+  }
+</style>
+
+<script>
+  const letterContainer = document.getElementById('letter-container');
+  const nav2 = document.getElementById('nav2');
+
+  if (letterContainer && nav2) {
+    // Observar cambios en Nav2 para sincronizar la transición
+    const observer = new MutationObserver(() => {
+      if (nav2.classList.contains('closed')) {
+        letterContainer.classList.add('flat');
+      } else {
+        letterContainer.classList.remove('flat');
+      }
+    });
+
+    observer.observe(nav2, { attributes: true, attributeFilter: ['class'] });
+  }
+</script>
