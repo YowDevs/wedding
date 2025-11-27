@@ -1,93 +1,116 @@
 <section id="Survey" class="grid grid-cols-1 sm:grid-cols-5 scroll-mt-40">
-<div id='form' class='w-full flex flex-col justify-center items-center not-last: bg-[#59002B] sm:col-start-2 sm:col-end-5 sm:row-start-3 col-start-1 col-end-6 rounded-b-full pb-20'>
-  <iframe class=" sm:w-100 mx-20 sm:h-160 rounded-xl" src="https://form" ></iframe>
-</div>
-  <!-- <form action='' method='post' class='flex flex-col p-20'>
-    <h1 class='sm:text-9xl text-4xl text-center p-20'>Encuesta</h1>
-
-    <label for='name'>Nombre:</label>
-    <input type='text' id='name' name='name' placeholder='Introduce tu nombre' required />
-
-    <label for='surname'>Apellidos:</label>
-    <input type='text' id='surname' name='surname' placeholder='Introduce tus apellidos' required />
-
-    <label for='attendance'>¿A qué asistirás?</label>
-    <label>
-      <input type='radio' id='attendance-none' name='attendance' value='none' required />
-      Nada
-    </label>
-    <label>
-      <input type='radio' id='attendance-prewedding' name='attendance' value='prewedding' required />
-      Preboda
-    </label>
-    <label>
-      <input type='radio' id='attendance-wedding' name='attendance' value='wedding' required />
-      Boda
-    </label>
-    <label>
-      <input type='radio' id='attendance-both' name='attendance' value='both' required />
-      Preboda y boda
-    </label>
-
-    <label for='people'>¿Cuántas personas asistís?</label>
-    <input type='number' id='people' name='people' min='1' placeholder='1' required />
-
-    <label for='allergies'>Alergias:</label>
-    <input type='text' id='allergies' name='allergies' placeholder='Introduce tus alergias' />
-
-    <label for='preferences'>Preferencias alimentarias:</label>
-    <input type='text' id='preferences' name='preferences' placeholder='Introduce tus preferencias alimentarias' />
-
-    <label for='bus'>¿Uso de alguno de los autobuses que pondremos a vuestra disposición?</label>
-    <label>
-      <input type='radio' id='bus-yes' name='bus' />
-      Sí
-    </label>
-    <label>
-      <input type='radio' id='bus-no' name='bus' />
-      No
-    </label>
-
-    <div class='hidden flex flex-col'>
-      <label for='which-bus'>¿Cuál?</label>
-      <label>
-        <input type='radio' id='bus-a' name='which-bus' />
-        Bus A
-      </label>
-      <label>
-        <input type='radio' id='bus-b' name='which-bus' />
-        Bus B
-      </label>
-    </div>
-
-    <button type='submit' class='mt-4 p-2
-            bg-blue-500 text-white
-            rounded'>Enviar</button>
-  </form> -->
+  <div class='w-full flex flex-col justify-center items-center not-last: bg-[#59002B] sm:col-start-2 sm:col-end-5 sm:row-start-3 col-start-1 col-end-6 pb-20'>
+    <form
+        class="flex flex-col text-white p-4 w-[75%]"
+    >
+      <fieldset class="mb-4">
+        <legend class="form-legend">Datos personales</legend>
+        <div>
+          <label class="form-label" for="name">Nombre</label>
+          <input class="form-input" id="name" name="entry.386223311" required>
+        </div>
+        <div>
+          <label class="form-label" for="surname">Apellidos</label>
+          <input class="form-input" id="surname" name="entry.1807035495" required>
+        </div>
+      </fieldset>
+      <fieldset class="mb-4">
+        <legend class="form-legend">Asistencia</legend>
+        <p class="form-label">¿A qué asistirás? (Puedes elegir más de uno)</p>
+        <div class="form-container">
+          <div>
+            <input class="form-input form-checkbox" id="assist-farewall" name="entry.1100793766" type="checkbox" value="Despedida">
+            <label class="form-label" for="assist-farewall">Despedida</label>
+          </div>
+          <div>
+            <input class="form-input form-checkbox" id="assist-prewedding" name="entry.1100793766" type="checkbox" value="Preboda">
+            <label class="form-label" for="assist-prewedding">Preboda</label>
+          </div>
+          <div>
+            <input class="form-input form-checkbox" id="assist-wedding" name="entry.1100793766" type="checkbox" value="Boda">
+            <label class="form-label" for="assist-wedding">Boda</label>
+          </div>
+        </div>
+        <div>
+          <label class="form-label" for="assistants">Número de asistentes</label>
+          <!-- Esto podría ser un type="text" para que no salga el modificador de la derecha, pero habría que validar que se meten solo números -->
+          <input class="form-input" id="assistants" name="entry.1604035408" type="number" min="1" value="1" required>
+        </div>
+      </fieldset>
+      <fieldset class="mb-4">
+        <legend class="form-legend">Comida</legend>
+        <div>
+          <label class="form-label" for="allergies">Alergias</label>
+          <input class="form-input" id="allergies" name="entry.2017511883">
+        </div>
+        <div>
+          <label class="form-label" for="food-preference">Preferencias alimentarias</label>
+          <select class="form-select" id="food-preference" name="entry.1598415351" required>
+              <option value="Vegetariano">Vegetariano</option>
+              <option value="Vegano">Vegano</option>
+              <option value="Otro">Otro</option>        
+          </select>
+          <div id="which-food-container" class="hidden">
+            <label class="form-label" for="which-food">Especificar preferencia alimentaria</label>
+            <input class="form-input" id="which-food" name="entry.587393911">
+          </div>
+        </div>
+      </fieldset>
+      <fieldset class="mb-4">
+        <legend class="form-legend">Transporte</legend>
+        <div>
+          <label class="form-label" for="use-bus">Usar bus</label>
+          <select class="form-select" id="use-bus" name="entry.1185864283" required>
+            <option value="No">No</option>
+            <option value="Sí">Sí</option>
+          </select>
+        </div>
+        <div id="which-bus-container" class="hidden">
+          <!-- Esto a lo mejor es un select, o un radio -->
+          <label class="form-label" for="which-bus">Especificar bus</label>
+          <input class="form-input" id="which-bus" name="entry.39653345">
+        </div>
+      </fieldset>
+      <button class="form-submit" type="submit">Enviar</button>
+    </form>
+    <p id="form-submitted" class="text-white"></p>
+  </div>
 </section>
+<script is:inline>
+  document.querySelector("form")?.addEventListener("submit", (e) => {
+    e.preventDefault();
 
-<!-- <style>
-  input,
-  select {
-    border: 1px solid black;
-    padding: 0.5rem;
-  }
+    const data = new FormData(e.target);
 
-  label {
-    padding: 0.5rem 0;
-  }
-</style> -->
+    fetch("https://docs.google.com/forms/d/e/1FAIpQLSdz6BWf5gyLzXEK8IrN9IVgPyAO38rkQxyk-vXyG6j-YVb3Vg/formResponse", {
+      method: "POST",
+      mode: "no-cors",
+      body: data,
+    });
 
-<!-- <script>
-  const busYes = document.getElementById("bus-yes");
-  const busNo = document.getElementById("bus-no");
-  const busOptions = document.querySelector(".hidden");
+    e.target.reset();
 
-  busYes?.addEventListener("change", () => {
-    busOptions?.classList.remove("hidden");
-  });
+    const formSubmitted = document.querySelector("#form-submitted");
+    formSubmitted.textContent = "Respuesta enviada correctamente";
+  })
 
-  busNo?.addEventListener("change", () => {
-    busOptions?.classList.add("hidden");
-  });
-</script> -->
+  document.body.addEventListener("change", (e) => {
+    if (e.target.id === "food-preference") {
+      const whichFoodContainer = document.getElementById("which-food-container");
+      
+      if (e.target.value === "Otro") {
+        whichFoodContainer.classList.remove("hidden");
+      } else {
+        whichFoodContainer.classList.add("hidden");
+      }
+    } else if (e.target.id === "use-bus") {
+      const whichBusContainer = document.getElementById("which-bus-container");
+
+      if (e.target.value === "Sí") {
+        whichBusContainer.classList.remove("hidden");
+      } else {
+        whichBusContainer.classList.add("hidden");
+      }
+    }
+  })
+</script>
