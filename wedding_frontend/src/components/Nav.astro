@@ -1,10 +1,6 @@
----
-import navImg from "../assets/nav.svg";
----
-
 <nav id='main-nav' class='fixed top-10 left-0 w-full z-50 flex justify-center opacity-0 pointer-events-none transition-opacity duration-300'>
   <div class='nav-bg relative w-full flex justify-center items-center  my-1 py-6'>
-    <ul class='relative z-10 flex flex-row space-x-50 sm:text-xl text-4xl text-white'>
+    <ul class='relative z-10 flex flex-row space-x-3 sm:space-x-20 xl:space-x-50 sm:text-xl text-md font-bold text-white'>
       <li><a href='#Schedule' class='nav-link'>Eventos</a></li>
       <li><a href='#Locations' class='nav-link'>Ubicaciones</a></li>
       <li><a href='#Lodging' class='nav-link'>Alojamientos</a></li>
@@ -22,6 +18,12 @@ import navImg from "../assets/nav.svg";
     z-index: 100;
   }
   
+    @media (max-width: 640px) {
+      .nav-bg {
+    background-size: 1000px ;
+      }
+  }
+
   .nav-link.active {
     font-weight: bold;
   }
@@ -40,8 +42,9 @@ import navImg from "../assets/nav.svg";
   const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
+        const isSmall = window.matchMedia('(max-width: 640px)').matches;
         // Si Nav2 NO está visible en pantalla, mostrar Nav
-        if (!entry.isIntersecting) {
+        if (!entry.isIntersecting || isSmall) {
           mainNav?.classList.add('show');
         } else {
           mainNav?.classList.remove('show');
@@ -51,10 +54,16 @@ import navImg from "../assets/nav.svg";
     { threshold: 0 }
   );
 
-  // Observar Nav2
-  const nav2 = document.querySelector('nav.nav-curve');
+  // Observar Nav2. Si Nav2 aún no está en el DOM cuando corre este script,
+  // esperar a DOMContentLoaded para inicializar el observer.
+  let nav2 = document.querySelector('nav.nav-curve');
   if (nav2) {
     observer.observe(nav2);
+  } else {
+    document.addEventListener('DOMContentLoaded', () => {
+      nav2 = document.querySelector('nav.nav-curve');
+      if (nav2) observer.observe(nav2);
+    });
   }
   
   // Lógica de links activos

@@ -67,6 +67,23 @@
     #nav2.closed .curve-p3 {transform: translateY(0px) rotate(0deg);}
     #nav2.closed .curve-4 {transform: translateY(0px) translateX(0px) rotate(0deg);}
   }
+   @media (min-width: 1850px) {
+    .curve-1 {transform: translateY(57px) rotate(-25deg);}
+    .curve-p1 {transform: translateY(25px) rotate(-35deg);}
+    .curve-2 {transform: translateY(10px) rotate(-8deg);}
+    .curve-p2 {transform: translateY(-4px);}
+    .curve-3 {transform: translateY(6px) rotate(6deg);}
+    .curve-p3 {transform: translateY(15px) rotate(35deg);}
+    .curve-4 {transform: translateY(55px) translateX(12px) rotate(25deg);}
+
+    #nav2.closed .curve-1 {transform: translateY(0px) rotate(0deg);}
+    #nav2.closed .curve-p1 {transform: translateY(0px) rotate(0deg);}
+    #nav2.closed .curve-2 {transform: translateY(0px) rotate(0deg);}
+    #nav2.closed .curve-p2 {transform: translateY(0px) rotate(0deg);}
+    #nav2.closed .curve-3 {transform: translateY(0px) rotate(0deg);}
+    #nav2.closed .curve-p3 {transform: translateY(0px) rotate(0deg);}
+    #nav2.closed .curve-4 {transform: translateY(0px) translateX(0px) rotate(0deg);}
+  }
 </style>
 
 <script>
@@ -74,15 +91,26 @@
   const mainNav = document.getElementById('main-nav');
 
   if (nav2 && mainNav) {
-    // Observar cuando main-nav tiene la clase 'show'
-    const observer = new MutationObserver(() => {
-      if (mainNav.classList.contains('show')) {
+    // Observar cuando main-nav tiene la clase 'show' y cerrar nav2 también en pantallas pequeñas
+    const updateClosed = () => {
+      const isSmall = window.matchMedia('(max-width: 640px)').matches;
+      if (mainNav.classList.contains('show') || isSmall) {
         nav2.classList.add('closed');
       } else {
         nav2.classList.remove('closed');
       }
+    };
+
+    const observer = new MutationObserver(() => {
+      updateClosed();
     });
 
     observer.observe(mainNav, { attributes: true, attributeFilter: ['class'] });
+
+    // También responder a cambios de tamaño de pantalla
+    window.addEventListener('resize', updateClosed);
+
+    // Estado inicial
+    updateClosed();
   }
 </script>
