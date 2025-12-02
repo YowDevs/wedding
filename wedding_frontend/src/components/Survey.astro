@@ -1,5 +1,5 @@
 <section id="Survey" class="grid grid-cols-1 sm:grid-cols-5 scroll-mt-40">
-  <div class='w-full flex flex-col justify-center items-center not-last: bg-[#59002B] sm:col-start-2 sm:col-end-5 sm:row-start-3 col-start-1 col-end-6 pb-20'>
+  <div class='w-full flex flex-col justify-center items-center not-last: bg-[#59002B] sm:col-start-2 sm:col-end-5 sm:row-start-3 col-start-1 col-end-6 pb-40 rounded-b-full'>
     <form
         class="flex flex-col text-white p-4 w-[75%]"
     >
@@ -71,11 +71,17 @@
           <input class="form-input" id="which-bus" name="entry.39653345">
         </div>
       </fieldset>
-      <button class="form-submit" type="submit">Enviar</button>
+      <button class="form-submit rounded-full" type="submit">Enviar</button>
     </form>
     <p id="form-submitted" class="text-white"></p>
   </div>
 </section>
+<style>
+  .form-input, .form-select {
+    border-radius: 999px;
+    background-color: #DDB1C0;
+    color: #111111
+</style>
 <script is:inline>
   document.querySelector("form")?.addEventListener("submit", (e) => {
     e.preventDefault();
