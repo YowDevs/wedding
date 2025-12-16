@@ -1,4 +1,4 @@
-<nav id='nav2' class='flex justify-center gap-5 mt-8 nav-curve text-[#59002B] text-lg sm:text-xl transition-all duration-300'>
+<nav id='nav2' class='flex justify-center gap-5 mt-8 nav-curve text-[#59002B] text-sm md:text-[20px] transition-all duration-300'>
   <a href='#Schedule' class='curve curve-1'>ITINERARIO</a>
   <p class='curve curve-p1'>|</p>
   <a href='#Locations' class='curve curve-2'>UBICACIONES</a>
@@ -43,11 +43,51 @@
     .curve-2 {transform: translateY(2px) rotate(-1deg);}
     .curve-3 {transform: translateY(2px) rotate(1deg);}
     .curve-4 {transform: translateY(6px) rotate(3deg);}
+  }
+  /* Ajustes para pantallas más grandes */
 
-    #nav2.closed .curve-1 {transform: translateY(0px) rotate(0deg);}
-    #nav2.closed .curve-2 {transform: translateY(0px) rotate(0deg);}
-    #nav2.closed .curve-3 {transform: translateY(0px) rotate(0deg);}
-    #nav2.closed .curve-4 {transform: translateY(0px) rotate(0deg);}
+  @media (min-width: 641px) {
+    .curve-1 {transform: translateY(75px) translateX(35px) rotate(-45deg);}
+    .curve-p1 {transform: translateY(32px)   translateX(15px) rotate(-35deg);}
+    .curve-2 {transform: translateY(10px) translateX(10px) rotate(-14deg);}
+    .curve-p2 {transform: translateY(-4px);}
+    .curve-3 {transform: translateY(10px) rotate(14deg ) translateX(-7px);}
+    .curve-p3 {transform: translateY(32px) translateX(-15px) rotate(35deg);}
+    .curve-4 {transform: translateY(75px) translateX(-35px) rotate(45deg);}  
+    
+    #nav2 {}
+  }
+
+  /* Ajustes para pantallas medianas (768px - 1023px) */
+  @media (min-width: 768px) and (max-width: 1023px) {
+    .curve-1 {transform: translateY(90px) translateX(55px) rotate(-45deg);}
+    .curve-p1 {transform: translateY(40px)translateX(25px) rotate(-35deg);}
+    .curve-2 {transform: translateY(10px) translateX(10px) rotate(-18deg);}
+    .curve-p2 {transform: translateY(-4px);}
+    .curve-3 {transform: translateY(10px) rotate(14deg ) translateX(-7px);}
+    .curve-p3 {transform: translateY(32px) translateX(-15px) rotate(35deg);}
+    .curve-4 {transform: translateY(85px) translateX(-50px) rotate(45deg);}  
+  }
+
+  /* Ajustes para pantallas grandes (1024px+) */
+  @media (min-width: 1024px) {
+   .curve-1 {transform: translateY(80px) translateX(50px) rotate(-45deg);}
+    .curve-p1 {transform: translateY(40px)translateX(25px) rotate(-35deg);}
+    .curve-2 {transform: translateY(10px) translateX(10px) rotate(-18deg);}
+    .curve-p2 {transform: translateY(-4px);}
+    .curve-3 {transform: translateY(10px) rotate(14deg ) translateX(-7px);}
+    .curve-p3 {transform: translateY(32px) translateX(-15px) rotate(35deg);}
+    .curve-4 {transform: translateY(80px) translateX(-45px) rotate(45deg);}  
+  }
+
+    @media (min-width: 1124px) {
+   .curve-1 {transform: translateY(85px) rotate(-35deg);}
+    .curve-p1 {transform: translateY(35px) rotate(-35deg);}
+    .curve-2 {transform: translateY(12px) rotate(-10deg);}
+    .curve-p2 {transform: translateY(-4px);}
+    .curve-3 {transform: translateY(6px) rotate(10deg);}
+    .curve-p3 {transform: translateY(25px) rotate(35deg);}
+    .curve-4 {transform: translateY(80px) translateX(-18px) rotate(35deg);}
   }
 
   @media (min-width: 1500px) {
@@ -58,14 +98,6 @@
     .curve-3 {transform: translateY(6px) rotate(10deg);}
     .curve-p3 {transform: translateY(25px) rotate(35deg);}
     .curve-4 {transform: translateY(70px) translateX(12px) rotate(30deg);}
-
-    #nav2.closed .curve-1 {transform: translateY(0px) rotate(0deg);}
-    #nav2.closed .curve-p1 {transform: translateY(0px) rotate(0deg);}
-    #nav2.closed .curve-2 {transform: translateY(0px) rotate(0deg);}
-    #nav2.closed .curve-p2 {transform: translateY(0px) rotate(0deg);}
-    #nav2.closed .curve-3 {transform: translateY(0px) rotate(0deg);}
-    #nav2.closed .curve-p3 {transform: translateY(0px) rotate(0deg);}
-    #nav2.closed .curve-4 {transform: translateY(0px) translateX(0px) rotate(0deg);}
   }
    @media (min-width: 1850px) {
     .curve-1 {transform: translateY(57px) rotate(-25deg);}
@@ -75,14 +107,6 @@
     .curve-3 {transform: translateY(6px) rotate(6deg);}
     .curve-p3 {transform: translateY(15px) rotate(35deg);}
     .curve-4 {transform: translateY(55px) translateX(12px) rotate(25deg);}
-
-    #nav2.closed .curve-1 {transform: translateY(0px) rotate(0deg);}
-    #nav2.closed .curve-p1 {transform: translateY(0px) rotate(0deg);}
-    #nav2.closed .curve-2 {transform: translateY(0px) rotate(0deg);}
-    #nav2.closed .curve-p2 {transform: translateY(0px) rotate(0deg);}
-    #nav2.closed .curve-3 {transform: translateY(0px) rotate(0deg);}
-    #nav2.closed .curve-p3 {transform: translateY(0px) rotate(0deg);}
-    #nav2.closed .curve-4 {transform: translateY(0px) translateX(0px) rotate(0deg);}
   }
 </style>
 
