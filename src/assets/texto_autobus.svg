@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 500">
+  
+  <!-- ITINERARIO DE IDA -->
+  <text x="50" y="50" 
+        style="font-family: 'AwesomeSerifVAR-SemiBoldTall', 'Awesome Serif VAR', serif; font-size: 22px; font-weight: 600; fill: #ffffff; letter-spacing: 3px; font-variation-settings: 'wght' 525, 'hght' 500;">
+    ITINERARIO DE IDA:
+  </text>
+  
+  <text x="50" y="90" 
+        style="font-family: 'AwesomeSerifVAR-BoldTall', 'Awesome Serif VAR', serif; font-size: 20px; font-weight: 700; fill: #ffffff; letter-spacing: 2px; font-variation-settings: 'wght' 700, 'hght' 500;">
+    Destino Guadalupe:
+  </text>
+  
+  <text x="50" y="120" 
+        style="font-family: 'AwesomeSerifVAR-Regular', 'Awesome Serif VAR', serif; font-size: 18px; fill: #ffffff; letter-spacing: 0.5px; font-variation-settings: 'wght' 175, 'hght' 0;">
+    Salida desde Fuenlabrada de los Montes - Parada de Autobuses a las 
+  </text>
+  <text x="650" y="120" 
+        style="font-family: 'AwesomeSerifVAR-BoldTall', 'Awesome Serif VAR', serif; font-size: 18px; font-weight: 700; fill: #ffffff; letter-spacing: 1px; font-variation-settings: 'wght' 700, 'hght' 500;">
+    16:00 h
+  </text>
+  
+  <text x="50" y="150" 
+        style="font-family: 'AwesomeSerifVAR-Regular', 'Awesome Serif VAR', serif; font-size: 18px; fill: #ffffff; letter-spacing: 0.5px; font-variation-settings: 'wght' 175, 'hght' 0;">
+    Salida desde Herrera del Duque - El Torreón a las 
+  </text>
+  <text x="520" y="150" 
+        style="font-family: 'AwesomeSerifVAR-BoldTall', 'Awesome Serif VAR', serif; font-size: 18px; font-weight: 700; fill: #ffffff; letter-spacing: 1px; font-variation-settings: 'wght' 700, 'hght' 500;">
+    16:15 h
+  </text>
+  
+  <!-- ITINERARIO DE VUELTA -->
+  <text x="50" y="210" 
+        style="font-family: 'AwesomeSerifVAR-SemiBoldTall', 'Awesome Serif VAR', serif; font-size: 22px; font-weight: 600; fill: #ffffff; letter-spacing: 3px; font-variation-settings: 'wght' 525, 'hght' 500;">
+    ITINERARIO DE VUELTA:
+  </text>
+  
+  <text x="50" y="250" 
+        style="font-family: 'AwesomeSerifItalicVAR-BoldRegular', 'Awesome Serif Italic VAR', serif; font-size: 18px; font-weight: 700; font-style: italic; fill: #ffffff; letter-spacing: 0.5px; font-variation-settings: 'wght' 700, 'hght' 0;">
+    Todos los autobuses de vuelta partirán desde las Bodegas Ruiz Torres.
+  </text>
+  
+  <text x="50" y="290" 
+        style="font-family: 'AwesomeSerifVAR-BoldTall', 'Awesome Serif VAR', serif; font-size: 20px; font-weight: 700; fill: #ffffff; letter-spacing: 2px; font-variation-settings: 'wght' 700, 'hght' 500;">
+    Destino Guadalupe: 
+  </text>
+  <text x="280" y="290" 
+        style="font-family: 'AwesomeSerifVAR-BoldTall', 'Awesome Serif VAR', serif; font-size: 18px; font-weight: 700; fill: #ffffff; letter-spacing: 1px; font-variation-settings: 'wght' 700, 'hght' 500;">
+    04:00 h y 06:30 h
+  </text>
+  
+  <text x="50" y="330" 
+        style="font-family: 'AwesomeSerifVAR-BoldTall', 'Awesome Serif VAR', serif; font-size: 20px; font-weight: 700; fill: #ffffff; letter-spacing: 2px; font-variation-settings: 'wght' 700, 'hght' 500;">
+    Destino Fuenlabrada de los Montes/Herrera del Duque:
+  </text>
+  <text x="50" y="360" 
+        style="font-family: 'AwesomeSerifVAR-BoldTall', 'Awesome Serif VAR', serif; font-size: 18px; font-weight: 700; fill: #ffffff; letter-spacing: 1px; font-variation-settings: 'wght' 700, 'hght' 500;">
+    02:00 h, 04:00 h y 06:30 h
+  </text>
+</svg>
